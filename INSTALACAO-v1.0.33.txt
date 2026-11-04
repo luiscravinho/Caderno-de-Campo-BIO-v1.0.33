@@ -1,0 +1,58 @@
+CADERNO DE CAMPO BIO — QUINTAL DO CRAVINHO
+VERSÃO 1.0.33 — INSTALAÇÃO PWA E UTILIZAÇÃO OFFLINE
+
+CONTEÚDO: index.html, app.js, sw.js, manifest.webmanifest,
+icon-192.png, icon-512.png, logo_quintal.png e este manual.
+
+1) GUARDE OS DADOS ANTES DE ATUALIZAR
+- Na aplicação antiga, entre em Guardar / Backup ZIP e guarde o ficheiro.
+- Não apague dados do navegador nem desinstale a app antiga antes de verificar o backup.
+
+2) PUBLICAR NUM ENDEREÇO HTTPS (NECESSÁRIO PARA INSTALAR)
+Opção simples: Netlify Drop, https://app.netlify.com/drop
+- Extraia este ZIP para uma pasta no computador.
+- Arraste a PASTA que contém index.html para o Netlify Drop.
+- Depois da publicação, abra o endereço https://...netlify.app indicado pelo serviço.
+- Guarde os dados de acesso à conta/site para atualizar mantendo o MESMO ENDEREÇO.
+AVISO: os ficheiros da aplicação publicados num site estático podem ser acessíveis ao público.
+  Não coloque ficheiros de backup JSON/ZIP com dados pessoais na pasta do site.
+
+3) INSTALAR NO ANDROID
+- Abra o endereço HTTPS no Google Chrome.
+- Se surgir um botão "Instalar" dentro da aplicação, utilize-o.
+- Caso contrário, menu ⋮ do Chrome > Instalar aplicação ou Adicionar ao ecrã principal.
+- Confirme. O ícone aparece no ecrã principal.
+
+4) INSTALAR NO IPHONE
+- Abra o endereço HTTPS no Safari.
+- Toque em Partilhar > Adicionar ao ecrã principal.
+- Ative "Abrir como aplicação" quando a opção aparecer.
+- Confirme Adicionar. Inicie pelo ícone no ecrã inicial.
+
+5) FUNCIONAMENTO OFFLINE
+- Abra a aplicação UMA VEZ com internet e aguarde pelo indicador "Cache OK".
+- Experimente ativar o modo avião, fechar e abrir a aplicação instalada.
+- As alterações são guardadas no dispositivo no armazenamento local do navegador.
+- O calendário externo e outras páginas da internet não funcionam offline.
+
+6) ATUALIZAR SEM PERDER REGISTOS
+- Guarde um backup ZIP antes de cada atualização.
+- Publique os novos ficheiros no MESMO endereço HTTPS (mesmo domínio e caminho).
+- Reabra a app com internet. Pode surgir "Atualizar agora" quando a cache mudar.
+- A app nunca força recarregar automaticamente um formulário em edição.
+
+IMPORTANTE: se mudar de endereço (por exemplo, ficheiro local para Netlify),
+os dados da versão antiga NÃO seguem automaticamente; faça um ZIP na origem,
+abra a nova app e use Restaurar ZIP. Não guarde backups dentro da pasta pública.
+
+CORREÇÕES DA 1.0.33
+- Instalabilidade: manifesto verificado, ícones reais na raiz, metadados iPhone.
+- Botão de instalação no Android quando o navegador disponibiliza a opção.
+- Instruções de instalação visíveis também para iPhone.
+- Cache de funcionamento offline com atualização em rede para index.html e app.js.
+- Limpeza seletiva de caches antigas desta aplicação; sem afetar outras apps.
+- Aviso de atualização, sem reiniciar a página automaticamente.
+- Mantém todos os 11 separadores e os formatos de registos da 1.0.32.
+
+REQUISITOS: um servidor HTTPS para uso instalado; navegadores atuais.
+AVISO: dados guardados apenas localmente não são sincronizados entre dispositivos.
